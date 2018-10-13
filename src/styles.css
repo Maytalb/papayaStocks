@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+.content {
+    height: 585px;
+}
+
+.halfHeight {
+    height: 50%;
+    overflow-y: scroll;
+}
+
+th, td {
+    text-align: center;
+}
+
+.search-nav {
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    width: 100%;
+    z-index: 1;
+}

@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">My Stocks</div>
+  </div>
+  <div class="row">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Stock</th>
+          <th scope="col">Symbol</th>
+          <th scope="col">Profitability</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let stock of myStocks">
+          <th scope="row">{{stock.name}}</th>
+          <td>{{stock.symbol}}</td>
+          <td [ngClass]="{'text-success': stock.profitability > 0, 'text-danger': stock.profitability <= 0}">{{stock.profitability | number:'1.2-2'}}</td>
+          <td><button type="button" (click)="sell(stock.symbol)" class="btn btn-outline-dark">Sell</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

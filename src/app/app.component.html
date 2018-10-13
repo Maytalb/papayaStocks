@@ -1,0 +1,16 @@
+<div>
+  <nav class="navbar navbar-light">
+    <ul class="navbar-nav mr-auto mt-4 mt-lg-0"></ul>
+    <span class="nav-text col-2">Current Funds: {{funds}}</span>
+    <span class="nav-text">Welcome {{userName}}!</span>    
+  </nav>
+  <div class="content">
+    <div class="halfHeight">
+      <app-results *ngIf="myStocks" [funds]="funds" [myStocks]="myStocks" (sellBuyStock)="onSellOrBuyStock($event)"></app-results>
+    </div>
+    <div class="halfHeight">
+      <app-my-portfolio *ngIf="myStocks" [myStocks]="myStocks" (sellBuyStock)="onSellOrBuyStock($event)"></app-my-portfolio>
+    </div>
+  </div>
+</div>
+
